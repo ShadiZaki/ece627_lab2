@@ -1,0 +1,7 @@
+# yosys lab2-syn.ys
+read_verilog counter.v
+chparam -set WIDTH 32 counter;
+chparam -set HEIGHT 32 counter;
+proc; opt; techmap; opt;
+show;
+synth_xilinx -edif counter.edif
