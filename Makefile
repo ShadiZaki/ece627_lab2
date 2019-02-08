@@ -28,4 +28,4 @@ vivado-txt:
 
 yosys:
 	rm -Rf counter.edif
-	yosys lab2-syn.ys
+	yosys lab2-syn.ys &> utilization.txt

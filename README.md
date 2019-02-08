@@ -215,6 +215,9 @@ MUXF7                           1
  
 As you can see, `yosys` generates slightly larger hardware than `vivado`. You get what you pay for.
 
+If you use `yosys`, remember to make sure `utilization.txt` reflects the output
+of that tool.
+
 ## Submitting your solution
 
 First off, just like lab1, you will need to **fork** this repository into your own space. Make sure to give 'nachiket@uwaterloo.ca' Guest permission to the forked repository.
