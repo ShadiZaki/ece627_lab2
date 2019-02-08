@@ -15,7 +15,7 @@ For this lab, you will develop a "**Row and Column Counter**" module. Specific
 tasks are below: 
 
 * Write Verilog code for the module that accepts an `enable` signal and generates two cascaded counter outputs `row_counter` and `column_counter`. 
-* Simulate your module for functional correctness by using the testbench provided. Ensure that the generated result matches the expected golden result provided.
+* Simulate your module for functional correctness by using the testbench provided. Ensure that the generated result matches the expected golden result provided. One extra test based on `enable` signal has **not** been provided to you but will be used while grading.
 * Synthesise your created design and estimate the quality of generated hardware by referring to the utlization of resource resport.
 
 ## Input Behaviour :
