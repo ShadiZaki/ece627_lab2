@@ -125,8 +125,9 @@ Update the file called `counter.v` already provided in the repository. The follo
 
 1. `clk` : 1 bit input : This is the clock input to the module
 2. `rst` : 1 bit input : This is a synchronous active high reset signal.
-3. `column_counter` : log2(width) bits input : This is the output of the column counter.
-4. `row_counter` : log2(height) bits input : This is the output of the row counter.
+3. `column_counter` : log2(width) bits output : This is the output of the column counter.
+4. `row_counter` : log2(height) bits output : This is the output of the row counter.
+5. `enable`: 1 bit input: This signal determines whether the counter is updated.
 
 The column width (width) and row height (height) should be parameterised with a
 `parameter` declaration. To compute the logrithm of the range (width, or
