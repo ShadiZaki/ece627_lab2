@@ -11,12 +11,17 @@ reg     clk=1'b0;
 reg     [1:0] rst;
 wire    [$clog2(WIDTH)-1:0]     column_counter;
 wire    [$clog2(HEIGHT)-1:0]    row_counter;
-wire    enable;
+reg    enable;
 
 always #0.5 clk = ~clk;
 
 initial begin
         rst = 2'b11;
+        enable = 1;
+        #15 enable = 0;
+        #10 enable = 1;
+        #14 enable = 0;
+        #10 enable = 1;
 end
 
 always@(posedge clk)
@@ -27,8 +32,6 @@ begin
 		$finish;
 	end
 end
-
-assign  enable = 1;
 
 counter
 #(
