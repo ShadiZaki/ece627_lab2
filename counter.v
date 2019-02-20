@@ -6,7 +6,8 @@ module counter #(parameter WIDTH = 32, parameter HEIGHT = 32)(
 	output reg [$clog2(HEIGHT)-1:0] row_counter
 	);
 
-	reg flag = 0;
+	wire flag;
+	assign flag = (column_counter == WIDTH-1) ? 1:0;
 
 	always @(posedge clk)
 	begin
@@ -18,14 +19,14 @@ module counter #(parameter WIDTH = 32, parameter HEIGHT = 32)(
 		begin
 			if(enable)
 			begin
-				if(column_counter == WIDTH-2)
-				begin
-					flag <= 1;
-				end
-				else
-				begin
-					flag <= 0;
-				end
+				// if(column_counter == WIDTH-2)
+				// begin
+				// 	flag <= 1;
+				// end
+				// else
+				// begin
+				// 	flag <= 0;
+				// end
 				column_counter <= (column_counter + 1) % WIDTH;
 			end
 		end
